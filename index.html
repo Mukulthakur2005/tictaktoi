@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" type="x-icon" href="https://www.pngkey.com/png/detail/296-2966115_game-png-background-image-tic-tac-toe-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Tic Tac Toe</title>
+</head>
+<body>
+    <div id="input-form">
+        <h2>Enter Player Names</h2>
+        <form id="player-form">
+            <label for="player1">Player 1:</label>
+            <input type="text" id="player1" placeholder="Enter Player 1 Name" required>
+            
+            <label for="player2">Player 2:</label>
+            <input type="text" id="player2" placeholder="Enter Player 2 Name" required>
+            
+            <button type="button" onclick="startGame()">Start Game</button>
+        </form>
+    </div>
+    
+    <div id="game-container" style="display: none;">
+        <div class="container">
+            <h1>Tic Tac Toe</h1>
+            <h3>Two Players</h3>
+            <div id="board" class="board"></div>
+            <p id="result" class="result"></p>
+            <div id="turn-display">Current Turn: <span id="current-player">X</span></div>
+            <button onclick="resetGame()">Reset Game</button>
+        </div>
+        <div id="end-game-message" style="display:none;">
+            <p id="winner-message"></p>
+            <button id="new-game-button" onclick="newGame()">New Game</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
